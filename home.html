@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Guide - Carbon Footprint Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f0fdf4;
+            text-align: center;
+        }
+        /* Header - Green Guide */
+        .header {
+            background-color: #166534;
+            color: white;
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .header h6 {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+		/* Navigation Menu */
+        .nav-menu {
+            background: #15803d;
+            padding: 10px;
+        }
+        .nav-links {
+            justify-content: center;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+			position: relative;
+          }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: 0.3s;
+            border-radius: 5px; /* Added border-radius here for consistent style */
+	    }
+        .nav-links a:hover {
+            background-color: #16a34a;
+        }
+        /* Main Content */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        /* Left Side - Carbon Footprint Info */
+        .info {
+            width: 60%;
+            text-align: left;
+            padding-right: 20px;
+        }
+        .info h1 {
+            color: #166534;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .info p {
+            color: #374151;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        /* Right Side - Navigation Modules */
+        .modules {
+            width: 40%;
+            background-color: #f0fdf4;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .modules h2 {
+            color: #166534;
+            margin-bottom: 15px;
+        }
+        .module-list {
+            list-style: none;
+            padding: 0;
+        }
+        .module-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background: #16a34a;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .module-list li:hover {
+            background: #15803d;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .info, .modules {
+                width: 90%;
+                text-align: center;
+            }
+        }
+		/* NEW: Dropdown-specific styles */
+		.dropdown-menu {
+			display: none;
+			position: absolute;
+			top: 100%; /* just below parent */
+			left: 0;
+			background-color: #fff;
+			list-style: none;
+			padding: 5px 0;
+			margin: 0;
+			min-width: 200px;
+			border-radius: 6px;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+			z-index: 1000;
+			transition: opacity 0.3s ease, visibility 0.3s ease;
+			opacity: 0;
+			visibility: hidden;
+			text-align: left;
+		}
+
+		.dropdown:hover .dropdown-menu {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.dropdown-menu li a {
+			padding: 12px 20px;
+			color: #222;
+			text-decoration: none;
+			display: block;
+			font-weight: 500;
+			transition: background-color 0.2s ease, color 0.2s ease;
+			border-left: 4px solid transparent;
+		}
+
+		.dropdown-menu li a:hover {
+			background-color: #C0F899; /* Bootstrap blue, you can change */
+			color: #16a34a;
+			border-left-color: #16a34a;
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		/* Optional: add a subtle separator between items */
+		.dropdown-menu li:not(:last-child) a {
+			border-bottom: 1px solid #eee;
+		}
+
+    </style>
+</head>
+<body>
+
+    <div style="text-align:center;" class="header"><span style="color: #a5d6a7;">🌱 Green Guide</span><br><h6>Know your Carbon Footprint</h6></div>
+
+    <div class="nav-menu">
+		<ul class="nav-links">
+			<li><a href="home.html">Home</a></li>
+			
+			<li class="dropdown">
+				<a href="#">Features</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Carbon Calculator</a></li>
+					<li><a href="#">Recommendations</a></li>
+					<li><a href="#">Analysis</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="ContactUs.html">Contact Us</a></li>
+			<li><a href="signup.php">SignUp</a></li>
+			<li><a href="login.php" target="_blank">Login</a></li>
+		</ul>
+	</div>
+
+    <div class="content">
+        <div class="info">
+            <h1>What is a Carbon Footprint?</h1>
+            <p style="text-align:justify;">A carbon footprint is the total amount of greenhouse gases (including carbon dioxide and methane) that are generated by our actions. These emissions come from various activities such as transportation, electricity usage, diet, and more.</p>
+
+            <h1>Why is it Important?</h1>
+            <p style="text-align:justify;">Understanding and reducing your carbon footprint can help slow climate change. By making small adjustments in your daily life, such as using public transport, switching to renewable energy, and reducing waste, you can make a positive impact on the environment.</p>
+
+            <h1>How Green Guide Helps?</h1>
+            <p style="text-align:justify;">Our platform helps you track and reduce your carbon footprint by providing real-time analytics, personalized recommendations, and ways to offset your impact through sustainable initiatives.</p>
+        </div>
+
+        <div class="modules">
+            <ul class="module-list">
+               <img src="images/foot.png" height="450">
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
